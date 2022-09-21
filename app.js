@@ -1,14 +1,16 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const cors = require("cors")
+const dotenv = require("dotenv")
+dotenv.config()
 
-var todosRouter = require('./app/api/todos/router');
-var itemsRouter = require('./app/api/items/router');
+const todosRouter = require('./app/api/todos/router');
+const itemsRouter = require('./app/api/items/router');
 
-var app = express();
+const app = express();
 app.use(cors())
 
 // view engine setup
