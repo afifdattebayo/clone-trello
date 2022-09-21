@@ -14,11 +14,11 @@ module.exports = {
     "dialect": "mysql"
   },
   production: {
-    username: process.env.DB_USERNAME,
-    password:  process.env.DB_PASSWORD,
-    database:  process.env.DB_DATABASE,
-    port:  process.env.DB_PORT,
-    host:  process.env.DB_HOST,
+    username: DB_USERNAME,
+    password: DB_PASSWORD,
+    database: DB_DATABASE,
+    port: DB_PORT,
+    host: DB_HOST,
     dialect: "postgres",
     dialectOptions: {
       ssl: { rejectUnauthorized: false },
